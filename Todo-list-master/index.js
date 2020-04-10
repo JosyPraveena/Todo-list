@@ -1,18 +1,14 @@
 const text = document.querySelector(".add-todo-section").children[1];
 const click = document.querySelector(".add-todo-section");
 
-console.log(click);
-
 function addItem(text) {
-  const template = `<input class="item-checkbox" type="checkbox"/><li>${text}</li><button class="edit-button"><i class="fas  fa-pencil-alt fa-2x"></i></button><button class="delete-button"><i class="fas  fa-trash-alt fa-2x"></i></button>`;
+  const template = `<li><input class="item-checkbox" type="checkbox"/><div class="eachtext"><p>${text}</p><button class="edit-button"><i class="fas  fa-pencil-alt fa-2x"></i></button></div><button class="delete-button"><i class="fas  fa-trash-alt fa-2x"></i></button></li>`;
   document.querySelector(".todo").innerHTML += template;
 }
 
 click.addEventListener("submit", (event) => {
   const messageText = text.value;
-  console.log(messageText);
   if (messageText) {
-    console.log(messageText);
     addItem(messageText);
     text.value = "";
   }
@@ -21,7 +17,6 @@ click.addEventListener("submit", (event) => {
 
 
 const characterCheck = document.querySelector("#character-check p");
-console.log(characterCheck);
 let limit = 100;
 
 text.addEventListener("keyup", (event) => {
@@ -32,3 +27,14 @@ text.addEventListener("keyup", (event) => {
   }
 });
 
+const todo = document.getElementsByClassName("todo")[0];
+
+todo.addEventListener("click", event => {
+  if (event.target.closest(".delete-button") != null) {
+    let removeElement = event.target.closest("li")
+    removeElement.remove();
+  } else if (event.target.closest(".edit-button") !=null){
+    let editText = event.target.closest(".eachtext").getElementsByTagName("p")[0];
+    editText.contentEditable = true;
+  } 
+  } );

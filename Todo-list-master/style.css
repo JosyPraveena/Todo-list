@@ -67,6 +67,7 @@ button:hover{
 }
 
 .container{
+    display: flex;
     border: 1px solid black;
     box-sizing: border-box;
     width: 1350px;
@@ -81,6 +82,7 @@ button:hover{
     display: flex;
     flex-direction: row;
     align-items: baseline;
+    justify-content: space-evenly;
 }
 .each-itembox{
     border: none;
@@ -125,4 +127,11 @@ button:hover{
 #character-check {
     display: flex;
     justify-content: center;
+}
+
+.todo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 600px;
 }
