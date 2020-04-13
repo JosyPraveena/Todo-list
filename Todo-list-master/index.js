@@ -15,7 +15,6 @@ click.addEventListener("submit", (event) => {
   event.preventDefault();
 });
 
-
 const characterCheck = document.querySelector("#character-check p");
 let limit = 100;
 
@@ -29,12 +28,14 @@ text.addEventListener("keyup", (event) => {
 
 const todo = document.getElementsByClassName("todo")[0];
 
-todo.addEventListener("click", event => {
+todo.addEventListener("click", (event) => {
   if (event.target.closest(".delete-button") != null) {
-    let removeElement = event.target.closest("li")
+    let removeElement = event.target.closest("li");
     removeElement.remove();
-  } else if (event.target.closest(".edit-button") !=null){
-    let editText = event.target.closest(".eachtext").getElementsByTagName("p")[0];
+  } else if (event.target.closest(".edit-button") != null) {
+    let editText = event.target
+      .closest(".eachtext")
+      .getElementsByTagName("p")[0];
     editText.contentEditable = true;
-  } 
-  } );
+  }
+});
