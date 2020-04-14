@@ -1,132 +1,136 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    height: 600px;
-    background-color: blanchedalmond;
+body {
+  height: 600px;
+  background-color: blanchedalmond;
 }
-
 
 .header {
-    height: 70px;
-    text-align: center;
+  height: 70px;
+  text-align: center;
 }
 
-.add-todo-section{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 50px;;
+.add-todo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px;
 }
 
-h1{
-    font-family: 'Gotu';
-    font-size: 3rem;
-    font-weight: 50;
-    margin: 1rem 0 3rem;
-    text-align: center;
+h1 {
+  font-family: "Gotu";
+  font-size: 3rem;
+  font-weight: 50;
+  margin: 1rem 0 3rem;
+  text-align: center;
 }
 
-#input{
-    height: 40px;
-    outline: none;
-    width: 900px;
-    font-size: 1.15rem;
-    margin: 0.25rem;
-    font-family: 'Gotu';
-    border: none;
+#input {
+  height: 40px;
+  outline: none;
+  width: 900px;
+  font-size: 1.15rem;
+  margin: 0.25rem;
+  font-family: "Gotu";
+  border: none;
 }
 
 .calendar {
- background-color: blanchedalmond;
- outline: none;
- border: none;
- height: 50px;
- width: 50px;
- margin: 0.25rem;
- cursor: pointer;
- border-radius: 25px;
+  background-color: blanchedalmond;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  margin: 0.25rem;
+  cursor: pointer;
+  border-radius: 25px;
 }
-.add-button{
-    background-color: blanchedalmond;
-    outline: none;
-    border: none;
-    height: 50px;
-    width: 50px;
-    margin: 0.25rem;
-    cursor: pointer;
-    border-radius: 25px;
-}
-
-button:hover{
-    opacity: 0.7;
+.add-button {
+  background-color: blanchedalmond;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  margin: 0.25rem;
+  cursor: pointer;
+  border-radius: 25px;
 }
 
-.container{
-    display: flex;
-    border: 1px solid black;
-    box-sizing: border-box;
-    width: 1350px;
-    height: 600px;
-    padding: 30px; 
-    margin: auto;
-    justify-content: space-evenly;    
-
+button:hover {
+  opacity: 0.7;
 }
 
-.items{
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-evenly;
+.container {
+  display: flex;
+  border: 1px solid black;
+  box-sizing: border-box;
+  width: 1350px;
+  height: 600px;
+  padding: 30px;
+  margin: auto;
+  justify-content: left;
 }
-.each-itembox{
-    border: none;
-    background-color: blanchedalmond;
-    font-family: 'Gotu';
-    font-size: 1rem;
-    width: 1000px;
-    outline: none;
-    margin: 0.25rem;
-    color: black; 
 
+.items {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
+.each-itembox {
+  border: none;
+  background-color: blanchedalmond;
+  font-family: "Gotu";
+  font-size: 1rem;
+  width: 1000px;
+  outline: none;
+  margin: 0.25rem;
+  color: black;
 }
 
 .item-checkbox {
-    width: 20px;
-    height: 20px;
-    border-radius: 15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
 }
-.edit-button{
-    background-color: blanchedalmond;
-    outline: none;
-    border: none;
-    height: 20px;
-    width: 20px;
-    cursor: pointer;  
-   } 
-
-.delete-button{
-    background-color: blanchedalmond;
-    outline: none;
-    border: none;
-    cursor: pointer;
+.edit-button {
+  background-color: blanchedalmond;
+  outline: none;
+  border: none;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
 }
 
-#letter-limit{
-    display: flex;
-    justify-content: center;
-    border: none;
-    background-color: blanchedalmond;
+.delete-button {
+  background-color: blanchedalmond;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+#letter-limit {
+  display: flex;
+  justify-content: center;
+  border: none;
+  background-color: blanchedalmond;
 }
 
 #character-check {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 600px;
 }
 
 .todo{
@@ -134,4 +138,8 @@ button:hover{
     flex-direction: column;
     justify-content: space-evenly;
     width: 600px;
+}
+.list-item {
+  display: flex;
+  flex-direction: row;
 }
