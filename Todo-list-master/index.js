@@ -1,5 +1,5 @@
-class ToDo{
-  constructor(){
+class ToDo {
+  constructor() {
     this.itemlist = [];
   }
 
@@ -19,27 +19,27 @@ class ToDo{
       this.addItem(messageText);
       text.value = "";
     }
+
     event.preventDefault();
   }
 
-  addListener(){
+  addListener() {
     const listItems = document.querySelectorAll("p");
-  
+
     for (let item of listItems) {
       item.addEventListener("click", (event) => {
         const currentText = event.currentTarget.textContent;
-        console.log(event.currentTarget.parentNode);
-  
+
         const insertForm = `<form class="forms"><input type="text" value="${currentText}"></form>`;
         event.currentTarget.parentNode.innerHTML = insertForm;
         this.editItem();
       });
     }
-  };
+  }
 
-  editItem(){
+  editItem() {
     const editInput = document.querySelectorAll(".forms");
-  
+
     for (let item of editInput) {
       item.addEventListener("submit", (event) => {
         const submitText = event.currentTarget.children[0].value;
@@ -49,9 +49,9 @@ class ToDo{
         addListener();
       });
     }
-  };
+  }
 
-  putRemainingChars(event){
+  putRemainingChars(event) {
     characterCheck.innerHTML = limit - text.value.length + " characters more";
     if (text.value.length >= limit) {
       text.value = text.value.substring(0, limit);
@@ -59,15 +59,13 @@ class ToDo{
     }
   }
 
-  handleDeleteOrEdit(event){
+  handleDeleteOrEdit(event) {
     if (event.target.closest(".delete-button") != null) {
       console.log("hey");
       let removeElement = event.target.closest("li");
       removeElement.remove();
     } else if (event.target.closest(".edit-button") != null) {
-      let editText = event.target
-        .closest(".eachtext")
-        .getElementsByTagName("p")[0];
+      let editText = event.target.closest(".eachtext").getElementsByTagName("p")[0];
       editText.contentEditable = true;
     }
   }
@@ -87,7 +85,6 @@ class ToDo{
  
 }
 
-
 const textInputField = document.querySelector(".add-todo-section");
 const text = textInputField.children[1];
 const characterCheck = document.querySelector("#character-check p");
@@ -96,16 +93,15 @@ const todo = document.querySelector("#todo-list");
 const limit = 100;
 let myTodo = new ToDo();
 
-
 //textInputField.addEventListener("submit", myTodo.addItemToList(event));
-textInputField.addEventListener("submit", event => {
+textInputField.addEventListener("submit", (event) => {
   myTodo.addItemToList(event);
 });
 
-text.addEventListener("keyup", event => {
+text.addEventListener("keyup", (event) => {
   myTodo.putRemainingChars(event);
 });
 
 todo.addEventListener("click", (event) => {
-  myTodo.handleDeleteOrEdit(event)
+  myTodo.handleDeleteOrEdit(event);
 });
