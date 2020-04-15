@@ -133,6 +133,12 @@ button:hover {
   width: 600px;
 }
 
+.todo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 600px;
+}
 .list-item {
   display: flex;
   flex-direction: row;
