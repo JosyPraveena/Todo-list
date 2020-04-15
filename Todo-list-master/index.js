@@ -10,6 +10,7 @@ class ToDo{
     // const template = `<li class="list-item"><input class="item-checkbox" type="checkbox"/><div class="eachtext"><p>${text}</p></div></li>`;
     todo.insertAdjacentHTML("afterbegin", template);
     this.addListener();
+    this.checkbox();
   }
 
   addItemToList(event) {
@@ -31,7 +32,7 @@ class ToDo{
   
         const insertForm = `<form class="forms"><input type="text" value="${currentText}"></form>`;
         event.currentTarget.parentNode.innerHTML = insertForm;
-        // editItem();
+        this.editItem();
       });
     }
   };
@@ -70,6 +71,20 @@ class ToDo{
       editText.contentEditable = true;
     }
   }
+  checkbox(){
+    console.log("enter checkbox");
+   const checkbox = document.querySelectorAll(".item-checkbox");
+    console.log(checkbox);
+   for (let eachcheck of checkbox) {
+     console.log("hey");
+     eachcheck.addEventListener('click' , () =>{
+                console.log(event.currentTarget);
+               let string = event.currentTarget.nextSibling.children[0].innerHTML.strike(); 
+               event.currentTarget.nextSibling.children[0].innerHTML = stringStrike;
+     });
+   }
+  }
+ 
 }
 
 
