@@ -4,7 +4,7 @@ class ToDo{
   }
 
   addItem(text) {
-    const todo = document.querySelector("#todo-list");
+    const todo = document.querySelector(".todo-list");
     console.log("asdfasdfasdfasdf" + todo);
     const template = `<li class="list-item"><input class="item-checkbox" type="checkbox"/><div class="eachtext"><p>${text}</p></div><button class="delete-button"><i class="fas  fa-trash-alt fa-2x"></i></button></li>`;
     // const template = `<li class="list-item"><input class="item-checkbox" type="checkbox"/><div class="eachtext"><p>${text}</p></div></li>`;
@@ -72,16 +72,12 @@ class ToDo{
     }
   }
   checkbox(){
-    console.log("enter checkbox");
    const checkbox = document.querySelectorAll(".item-checkbox");
-    console.log(checkbox);
    for (let eachcheck of checkbox) {
-     console.log("hey");
      eachcheck.addEventListener('click' , () =>{
-                console.log(event.currentTarget);
                let strikeString = event.currentTarget.nextSibling.children[0].innerHTML.strike(); 
                event.currentTarget.nextSibling.children[0].innerHTML = strikeString;
-
+              todo.append(event.target.closest("li"));
      });
    }
   }
@@ -92,7 +88,7 @@ class ToDo{
 const textInputField = document.querySelector(".add-todo-section");
 const text = textInputField.children[1];
 const characterCheck = document.querySelector("#character-check p");
-const todo = document.querySelector("#todo-list");
+const todo = document.querySelector(".todo-list");
 
 const limit = 100;
 let myTodo = new ToDo();
