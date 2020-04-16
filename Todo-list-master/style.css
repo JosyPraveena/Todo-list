@@ -127,6 +127,7 @@ button:hover {
   font-family: "Gotu";
   font-size: 1rem;
   font-style: italic;
+  font-weight: 400;
 }
 
 .todo {
@@ -147,10 +148,12 @@ button:hover {
   flex-direction: row;
   justify-content: space-between;
   width: 900px;
+  padding: 1rem;
 }
 .eachtext {
   font-size: 1rem;
   font-family: "Gotu";
+  font-weight: 600;
 }
 
 
