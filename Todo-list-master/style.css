@@ -124,6 +124,9 @@ button:hover {
 #character-check {
   display: flex;
   justify-content: center;
+  font-family: "Gotu";
+  font-size: 1rem;
+  font-style: italic;
 }
 
 .todo {
@@ -142,4 +145,12 @@ button:hover {
 .list-item {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 900px;
 }
+.eachtext {
+  font-size: 1rem;
+  font-family: "Gotu";
+}
+
+

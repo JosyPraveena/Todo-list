@@ -57,6 +57,7 @@ class ToDo{
       text.value = text.value.substring(0, limit);
       characterCheck.innerHTML = "0 Letters Remaining";
     }
+    characterCheck.innerHTML = limit - text.value.length + " characters more";
   }
 
   handleDeleteOrEdit(event){
